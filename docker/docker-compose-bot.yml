@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  template_tg_bot:
+    image: template_telegram_bot:1
+    container_name: template_tg_bot
+    environment:
+      - BOT_TOKEN=$BOT_TOKEN
+    restart: always
+    networks:
+      telegram_bot:
+
+networks:
+  telegram_bot:
